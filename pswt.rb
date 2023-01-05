@@ -5,20 +5,20 @@
 class Pswt < Formula
   desc ""
   homepage "https://github.com/devmegablaster/pastewut-cli/"
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/devmegablaster/pastewut-cli/releases/download/v1.1.0/pastewut-cli_1.1.0_darwin_arm64.tar.gz"
-      sha256 "daf958371c34bfbb0dfd9da89488fe302c2e40db2bb3b83175a55e223ab8133f"
+      url "https://github.com/devmegablaster/pastewut-cli/releases/download/v1.1.1/pastewut-cli_1.1.1_darwin_arm64.tar.gz"
+      sha256 "dba068f6730dc620850e71ea95469f5d51187f58fb443d0c892511d197dba271"
 
       def install
         bin.install "pswt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/devmegablaster/pastewut-cli/releases/download/v1.1.0/pastewut-cli_1.1.0_darwin_amd64.tar.gz"
-      sha256 "93504537a1a3f2ef5c617d8b097f69d67da89884040047df28d257771e5f29f1"
+      url "https://github.com/devmegablaster/pastewut-cli/releases/download/v1.1.1/pastewut-cli_1.1.1_darwin_amd64.tar.gz"
+      sha256 "5c8bb7e7927a6b0d4e21b8417700991db46a8d6d9327783d59897d275c595a95"
 
       def install
         bin.install "pswt"
@@ -27,17 +27,17 @@ class Pswt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devmegablaster/pastewut-cli/releases/download/v1.1.0/pastewut-cli_1.1.0_linux_arm64.tar.gz"
-      sha256 "a54efd37e45991b103df70b93a3aef48651c01a235eed21da9de56b769030833"
+    if Hardware::CPU.intel?
+      url "https://github.com/devmegablaster/pastewut-cli/releases/download/v1.1.1/pastewut-cli_1.1.1_linux_amd64.tar.gz"
+      sha256 "21095665e581ecc96cada7b5a61e0b493736c7ec16efe09c73f22a9c88c8465d"
 
       def install
         bin.install "pswt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/devmegablaster/pastewut-cli/releases/download/v1.1.0/pastewut-cli_1.1.0_linux_amd64.tar.gz"
-      sha256 "6da5b6ffbf577867cd398b6ab87c645755240b6bcb817862e4d7fe1190ee4f2e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/devmegablaster/pastewut-cli/releases/download/v1.1.1/pastewut-cli_1.1.1_linux_arm64.tar.gz"
+      sha256 "866b17a311b1af943100340289ea792b96852fa5773cdc1164f650e750d1635a"
 
       def install
         bin.install "pswt"
