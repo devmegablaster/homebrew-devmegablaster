@@ -5,20 +5,20 @@
 class Jatt < Formula
   desc ""
   homepage "https://github.com/devmegablaster/jatt"
-  version "1"
+  version "0.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/devmegablaster/jatt/releases/download/v1/jatt_Darwin_x86_64.tar.gz"
-      sha256 "51d8c13519d8435e7d6d22100a2f4942d1f71c63ca8390d8a8bbabf38d26e799"
+      url "https://github.com/devmegablaster/jatt/releases/download/v0.1/jatt_Darwin_x86_64.tar.gz"
+      sha256 "56b7d11039496836abb5a8817f0f2e081dc52d87460933d4a00729d8904c9c90"
 
       def install
         bin.install "jatt"
       end
     end
     on_arm do
-      url "https://github.com/devmegablaster/jatt/releases/download/v1/jatt_Darwin_arm64.tar.gz"
-      sha256 "59cfb1cbc66b9fa7c7810d4ba065c6555d3dda7a44c1bf373efc20249cda9294"
+      url "https://github.com/devmegablaster/jatt/releases/download/v0.1/jatt_Darwin_arm64.tar.gz"
+      sha256 "8c5b782557a2cb8036e86fad503fe590e3c877fcced1bbc39a0304ed58a4dd11"
 
       def install
         bin.install "jatt"
@@ -29,8 +29,8 @@ class Jatt < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/devmegablaster/jatt/releases/download/v1/jatt_Linux_x86_64.tar.gz"
-        sha256 "08e25fd3b4c15e3c220b0c03847846b1d1c2c507abb3b6a76f07dbf95a5b5320"
+        url "https://github.com/devmegablaster/jatt/releases/download/v0.1/jatt_Linux_x86_64.tar.gz"
+        sha256 "1fae123a6ada405011f6b7ce50599473706cdff6fa959c38298351bdd63bf244"
 
         def install
           bin.install "jatt"
@@ -39,8 +39,8 @@ class Jatt < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/devmegablaster/jatt/releases/download/v1/jatt_Linux_arm64.tar.gz"
-        sha256 "371dde688f597441dde4beb766c1ec09f3c66d4c0230e56e7b39cec08e64d6ed"
+        url "https://github.com/devmegablaster/jatt/releases/download/v0.1/jatt_Linux_arm64.tar.gz"
+        sha256 "6e748fbc62ba904acb06bf24bfc817eef868183ab92c533834cc2cabf2998aaa"
 
         def install
           bin.install "jatt"
