@@ -10,7 +10,7 @@ class Jatt < Formula
   on_macos do
     on_intel do
       url "https://github.com/devmegablaster/jatt/releases/download/v0.10/jatt_Darwin_x86_64.tar.gz"
-      sha256 "ec2f52e012855da59e1bef3c2dc0cb6ecc19588a35dab9c5056e2c0ac0442fa3"
+      sha256 "3b816d082d2f5ab49c4dac3af0cfbec1bed85cf0607ddcc85025231fc3aa8a4d"
 
       def install
         bin.install "jatt"
@@ -18,7 +18,7 @@ class Jatt < Formula
     end
     on_arm do
       url "https://github.com/devmegablaster/jatt/releases/download/v0.10/jatt_Darwin_arm64.tar.gz"
-      sha256 "6eecc90f241339b13a9fb6148cc75e91fd1aa51b9484c1d477b7cec93e14ed28"
+      sha256 "8e31ee29e41e90aba5a281af016f544e540186aebd8f2fe3baccc54f2e348d3f"
 
       def install
         bin.install "jatt"
@@ -30,7 +30,7 @@ class Jatt < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/devmegablaster/jatt/releases/download/v0.10/jatt_Linux_x86_64.tar.gz"
-        sha256 "4b54376631f0f38c3b1deee75adb6c75721d1a3f64503b25146384791c50013c"
+        sha256 "18ae60f4b4a4a44655b628c041e22df0d712c53f77430dd15ddf4ca135d1e166"
 
         def install
           bin.install "jatt"
@@ -40,7 +40,7 @@ class Jatt < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/devmegablaster/jatt/releases/download/v0.10/jatt_Linux_arm64.tar.gz"
-        sha256 "246e0371e19d845b5c983e60e8c1db3168da51cf2b719c9e45c997a6ae46c7c4"
+        sha256 "49d5a50f8ee92d667d0fcb4f2831a97ba25d859c00f63aa1551b2e51b5182615"
 
         def install
           bin.install "jatt"
