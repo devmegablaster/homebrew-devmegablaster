@@ -5,20 +5,20 @@
 class Jatt < Formula
   desc ""
   homepage "https://github.com/devmegablaster/jatt"
-  version "0.11"
+  version "0.12"
 
   on_macos do
-    on_intel do
-      url "https://github.com/devmegablaster/jatt/releases/download/v0.11/jatt_Darwin_x86_64.tar.gz"
-      sha256 "0a1fc3edf99534aa62db8c13f71d3f347814f493f507288908a853b1f32a978b"
+    if Hardware::CPU.intel?
+      url "https://github.com/devmegablaster/jatt/releases/download/v0.12/jatt_Darwin_x86_64.tar.gz"
+      sha256 "d310e35ebe1af15a7b0283c5aef9251f381c1a5a28b638f5b4b82241e8452178"
 
       def install
         bin.install "jatt"
       end
     end
-    on_arm do
-      url "https://github.com/devmegablaster/jatt/releases/download/v0.11/jatt_Darwin_arm64.tar.gz"
-      sha256 "55806450ac58ecea2cd6ff8d02a3b7e32b35a66bfac9f9621591a647c05e2060"
+    if Hardware::CPU.arm?
+      url "https://github.com/devmegablaster/jatt/releases/download/v0.12/jatt_Darwin_arm64.tar.gz"
+      sha256 "53ed4c6591186f1139f425d22cb58b265be7e7c49ecbbeac50f348251fb2ec04"
 
       def install
         bin.install "jatt"
@@ -27,20 +27,20 @@ class Jatt < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/devmegablaster/jatt/releases/download/v0.11/jatt_Linux_x86_64.tar.gz"
-        sha256 "8aa4fbb7fc734b9b34329e7f22840e0349015f9e7bfcda84b3bad2930a52634a"
+        url "https://github.com/devmegablaster/jatt/releases/download/v0.12/jatt_Linux_x86_64.tar.gz"
+        sha256 "6250a43c17c6c5c91ea7489742e93ca2c300db4723c0d71638559deaea930fdb"
 
         def install
           bin.install "jatt"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/devmegablaster/jatt/releases/download/v0.11/jatt_Linux_arm64.tar.gz"
-        sha256 "4dce55000d7dca53656dde2c1142a99be71bd32e73946294d52c7a76b9ddb471"
+        url "https://github.com/devmegablaster/jatt/releases/download/v0.12/jatt_Linux_arm64.tar.gz"
+        sha256 "90d2e2fb79938420dbe301257ff4231f1d2c16178903d9b778a40cc5b07048b5"
 
         def install
           bin.install "jatt"
