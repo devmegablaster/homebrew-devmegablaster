@@ -1,6 +1,6 @@
 cask "notch-pilot" do
-  version "0.1.6"
-  sha256 "b71da57575d390e1d830cf87b9b73c26d816061267a99879e0c49c5898f586ce"
+  version "0.1.7"
+  sha256 "23e2548f95b346a85d121c296fea6937a109704eac26b8911384b07df6db0e04"
 
   url "https://github.com/devmegablaster/Notch-Pilot/releases/download/v#{version}/NotchPilot-#{version}.dmg"
   name "Notch Pilot"
@@ -11,13 +11,16 @@ cask "notch-pilot" do
 
   app "Notch Pilot.app"
 
-  # The app is ad-hoc signed (no paid Apple Developer ID), so
-  # macOS Gatekeeper quarantines it on download. Strip the
-  # quarantine attribute so the user isn't blocked on first
-  # launch. Standard pattern for unsigned open-source casks.
+  # Postflight: strip the quarantine attribute (the app is
+  # ad-hoc signed, so Gatekeeper would otherwise block it on
+  # first launch) and then immediately launch the app. The
+  # user expects a notch utility to "just appear" after
+  # install, not to have to dig through /Applications.
   postflight do
     system_command "/usr/bin/xattr",
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/Notch Pilot.app"]
+    system_command "/usr/bin/open",
+                   args: ["-a", "#{appdir}/Notch Pilot.app"]
   end
 
   zap trash: [
