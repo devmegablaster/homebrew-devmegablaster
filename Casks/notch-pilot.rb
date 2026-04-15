@@ -1,6 +1,6 @@
 cask "notch-pilot" do
-  version "0.1.5"
-  sha256 "5a5d13954b244540c60bc1b33f4f7aeecd522961897b78d11443ccff2e7671b1"
+  version "0.1.6"
+  sha256 "b71da57575d390e1d830cf87b9b73c26d816061267a99879e0c49c5898f586ce"
 
   url "https://github.com/devmegablaster/Notch-Pilot/releases/download/v#{version}/NotchPilot-#{version}.dmg"
   name "Notch Pilot"
